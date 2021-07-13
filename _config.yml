@@ -11,12 +11,12 @@
 # (Using that method instead of site.owner, in case your posts get cloned with your repo.)
 
 # Site settings
-title: Gartner Brothers AB
-description: Welcome to the services of Gartner Brothers!
+title: Gartner Brothers Group
+description: We simplyfy your finance!
 owner:
-  name: Gartner Brothers AB # or company name
+  name: Gartner Brothers Group # or company name
   url: "https://spgarn.github.io" # your URL
-first_published: 2010 # if migrating another site, the year of your first publish
+first_published: 2019 # if migrating another site, the year of your first publish
                       # Must be a 4-digit integer year (math is used on it)
 url: "https://spgarn.github.io" # the base hostname & protocol for this site
 baseurl: "/gartner-brothers/" # the subpath of your site, e.g. /blog
@@ -27,21 +27,22 @@ lang: en-us # used in HTML lang attributes
 
 # on landing page
 # - set the greeting only if you want to display the first green section
+# Comment in "title and text" to get back green area
 greeting:
-  title: _Your greeting_  
-  text: _Your detailed greeting text_
+  # title: _Your greeting_
+  # text: _Your detailed greeting text_
 # - displayed at the bottom
-closing-head: _Your closing_
-closing-para: _Your detailed closing_
+closing-head: If you have any questions, feel free to contacts us.
+closing-para: We answer as fast as we can and are always up for a new challange.
 
 # on all pages (and the first three you list display with greeting, if included)
 social:
-  twitter: https://twitter.com/_username_
-  github: https://github.com/_username_
-  linkedin-square: https://linkedin.com/in/_username_
-  facebook-official: https://facebook.com/_username_
+  # twitter: https://twitter.com/_username_
+  # github: https://github.com/_username_
+  # linkedin-square: https://linkedin.com/in/_username_
+  # facebook-official: https://facebook.com/gartners.se
   #google-plus-square: https://plus.google.com/u/0/+_username_
-  email: /contact/ # you can configure and use this contact page or use your email addy
+  email: contact/ # you can configure and use this contact page or use your email addy
   #flickr:
   #instagram:
   #youtube-square:
@@ -78,7 +79,6 @@ social:
 
 # - title for your blog's featured posts
 features-title: Featured topics
-
 # if you use this repo's `ruby compose.rb` script to initiate new posts, put the
 # command to invoke your editor here. (I didn't spend time dealing with spaces
 # and full paths of the various OSes in compose.rb. For my Windows

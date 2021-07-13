@@ -61,6 +61,9 @@ $baseurl: '{{ site.baseurl }}/images';
 		letter-spacing: _size(letter-spacing);
 		line-height: _font(ctrl-lheight-normal);
 
+		
+
+
 		@include breakpoint(xlarge) {
 			font-size: _font(ctrl-size-xlarge);
 		}
@@ -74,6 +77,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			letter-spacing: _size(letter-spacing) * 0.5;
 		}
 	}
+
 
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
@@ -387,6 +391,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-decoration: none;
 		width: 100%;
 
+	
+
 		&:invalid {
 			box-shadow: none;
 		}
@@ -425,6 +431,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	input[type="email"],
 	select {
 		height: _size(element-height);
+	
 	}
 
 	textarea {
@@ -499,27 +506,28 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 	::-webkit-input-placeholder {
-		color: _palette(fg-light) !important;
+		// color: _palette(fg-light) !important;
+		color: white !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: _palette(fg-light) !important;
+		color: white !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: _palette(fg-light) !important;
+		color: white !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: _palette(fg-light) !important;
+		color: white !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: _palette(fg-light) !important;
+		color: white !important;
 		opacity: 1.0;
 	}
 
@@ -1146,16 +1154,18 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 		&:nth-child(1n) {
 			text-align: right;
+			background-color: #23395d;
 		}
 		&:nth-child(2n) {
 			@include vendor('flex-direction', 'row-reverse');
 			text-align: left;
+			background-color: #a4a4a5;
 		}
 
 		@for $i from 1 through _misc(max-spotlights) {
 			$j: 0.075 * $i;
 			&:nth-child(#{$i}) {
-				background-color: rgba(0,0,0, $j);
+				min-height: 100vh;
 			}
 		}
 
