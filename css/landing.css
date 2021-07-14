@@ -1,0 +1,33 @@
+.gridArea{
+        min-height:100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas:
+        'header header header'
+        'left center right';
+        column-gap: 1rem;
+
+          
+}
+
+@media screen and (max-width: 1000px) {
+  .gridArea{
+  grid-template-areas:
+  'header'
+  'left'
+  'center'
+  'right';
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  }
+}
+
+.gridHeader{
+        text-align: center;
+        margin: 64px 0px;
+        grid-area: header; 
+        justify-self: center; 
+        font-size: xx-large;
+
+}
