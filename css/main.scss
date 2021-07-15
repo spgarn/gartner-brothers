@@ -54,6 +54,49 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.disqus {
+    margin-top: 0;
+}
+
+.gridArea{
+    min-height:90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:
+    'header header header'
+    'left center right';
+    column-gap: 1rem;
+
+      
+}
+
+@media screen and (max-width: 1000px) {
+.gridArea{
+grid-template-areas:
+'header'
+'left'
+'center'
+'right';
+grid-template-rows: 0.1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr;
+}
+}
+
+.gridHeader{
+    text-align: center;
+    margin: 64px 0px;
+    grid-area: header; 
+    justify-self: center; 
+    font-size: xx-large;
+
+}
+
+
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(ctrl-family);

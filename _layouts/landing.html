@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 {% include topcomment.html %}
 <html lang="{{ site.lang }}">
-  <link rel="stylesheet"  href="../css/vendor/disqus.css">
+  <!-- <link rel="stylesheet"  href="../css/vendor/disqus.css"> -->
 
   {% include head.html %}
 
   <body class="landing">
 
     <!-- Page Wrapper -->
-    <div id="page-wrapper">
+    <div id="page-wrapper" >
 
       {% include header.html %}
 
         <!-- Banner -->
-          <section id="banner">
+          <section id="banner" style="min-height: 100vh;">
             <div class="inner">
               <h1>{{ site.title }}</h1>
               <p>{{ site.description }}</p>
-              <!--
+              
               <ul class="actions">
-                <li><a href="#" class="button special">Activate</a></li>
+                <li><a href="#sendemail" class="button special">Kontakta oss</a></li>
               </ul>
-              -->
+             
             </div>{%
             if site.greeting %}
-            <a href="#greeting" class="more scrolly">Continue</a>{%
+            <a href="#greeting" class="more scrolly">Fortsätt</a>{%
             else %}
-            <a href="#landing_pages" class="more scrolly">Continue</a>{%
+            <a href="#verksamhet" class="more scrolly">Fortsätt</a>{%
             endif %}
           </section>
           {%
@@ -115,57 +115,82 @@
       endif %}
         <!-- CTA -->
 
-        <section class="gridArea">
-          <div class="gridHeader">What we do</div>
+        <section class="gridArea" id="verksamhet">
+          <div class="gridHeader">Vad vi erbjuder</div>
           <div style="justify-self: center;text-align: center;"><img src="{{ site.baseurl }}/images/calculator.svg"/>
             <p style="font-size: x-large; margin-top: 12px;">Redovisning</p>
-          <ul style="margin-top: 32px;">
-            <li style="font-size: large;">Spelar datorspel</li>
-            <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-            <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-            <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-            <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-            <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
+          <ul style="margin-top: 32px; text-align: left;">
+            <li style="font-size: large;">Löpande bokföringen</li>
+            <li style="font-size: large; margin-top: 12px;">Löner</li>
+            <li style="font-size: large; margin-top: 12px;">Momsdeklarationer</li>
+            <li style="font-size: large; margin-top: 12px;">Arbetsgivardeklarationer</li>
+            <li style="font-size: large; margin-top: 12px;">Digitalisering</li>
+            <li style="font-size: large; margin-top: 12px;">Effektivisering</li>
           </ul></div>
-          <div style="justify-self: center; text-align: center;"><img src="{{ site.baseurl }}/images/reading.svg"/> <p style="font-size: x-large; margin-top: 12px;">Redovisning</p>
-            <ul style="margin-top: 32px;">
-              <li style="font-size: large;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
+          <div style="justify-self: center; text-align: center;"><img src="{{ site.baseurl }}/images/reading.svg"/> 
+            <p style="font-size: x-large; margin-top: 12px;">Revision</p>
+            <ul style="margin-top: 32px; text-align: left;">
+              <li style="font-size: large;">Revision av aktiebolag</li>
+              <li style="font-size: large; margin-top: 12px;">Revision av bostadsrättsförening</li>
+              <li style="font-size: large; margin-top: 12px;">Kvalitetssäkring av årsredovisning</li>
+              <li style="font-size: large; margin-top: 12px;">Analys av underlag</li>
+              <li style="font-size: large; margin-top: 12px;">Berättelse om väsentliga händelser</li>
+              <!-- <li style="font-size: large; margin-top: 12px;"></li> -->
             </ul></div>
-          <div style="justify-self: center; text-align: center;"><img src="{{ site.baseurl }}/images/b-meeting.svg"/> <p style="font-size: x-large; margin-top: 12px;">Redovisning</p>
-            <ul style="margin-top: 32px;">
-              <li style="font-size: large;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
-              <li style="font-size: large; margin-top: 12px;">Spelar datorspel</li>
+          <div style="justify-self: center; text-align: center;"><img src="{{ site.baseurl }}/images/b-meeting.svg"/>
+             <p style="font-size: x-large; margin-top: 12px;">Affärsrådgivning</p>
+            <ul style="margin-top: 32px; text-align: left;">
+              <li style="font-size: large;">Skatterådgivning</li>
+              <li style="font-size: large; margin-top: 12px;">Kostnadseffektivisering</li>
+              <li style="font-size: large; margin-top: 12px;">Avdragslexikon</li>
+              <li style="font-size: large; margin-top: 12px;">Utdelning</li>
+              <li style="font-size: large; margin-top: 12px;">Fåmansbolag</li>
+              <li style="font-size: large; margin-top: 12px;">Förhandlingar</li>
             </ul></div>
+        </section>
+
+        <section class="gridArea" id="omoss">
+          <div class="gridHeader">Ansvariga</div>
+          <div style="justify-self: center;text-align: center;"><img style="width: 150px; height: 150px; border-radius: 50%;" src="{{ site.baseurl }}/images/test.jpg"/>
+            <p style="font-size: x-large; margin-top: 12px;">Simon Gärtner</p>
+            <p style="font-size: large;">Juridik</p>
+            <p style="font-size: large;">simon@gartners.se</p>
+            <p style="font-size: large; margin-top: 12px;">0768 56 78 79</p>
+          </div>
+          <div style="justify-self: center; text-align: center;"><img style="width: 150px; height: 150px; border-radius: 50%" src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.18169-9/76699_10150296210380276_555091_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=cdbe9c&_nc_ohc=IyiAtqoA_YIAX9m_h25&_nc_ht=scontent-mad1-1.xx&oh=ad299111c5cea8f671ca2df39af21a3d&oe=60F59E12"/> 
+            <p style="font-size: x-large; margin-top: 12px;">Anton Gärtner</p>
+            <p style="font-size: large;">Ekonomi</p>
+            <p style="font-size: large;">anton@gartners.se</p>
+            <p style="font-size: large; margin-top: 12px;">0722 35 53 59</p>
+          </div>
+          <div style="justify-self: center; text-align: center;"><img style="width: 150px; height: 150px; border-radius: 50%" src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.18169-9/31428_10150205512040142_468692_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=eeOdGAoy4aMAX9QjvBl&_nc_ht=scontent-mad1-1.xx&oh=6b9197b73bfdb328296771749dbb2f83&oe=60F45866"/> 
+            <p style="font-size: x-large; margin-top: 12px;">Erik Hultén</p>
+            <p style="font-size: large;">Revision</p>
+            <p style="font-size: large; ">erik@gartners.se</p>
+            <p style="font-size: large; margin-top: 12px;">0765 87 58 73</p>
+            </div>
         </section>
           
             
             <section>
-              <form id="sendemail" action="//formspree.io/finance@gartners.se" method="POST">
+              <form id="sendemail" action="https://formspree.io/f/xrgrakrk" method="POST">
+                <div class="gridHeader">Förfrågningar</div>
                 <div class="row uniform" style="margin-top: 12px; width: 80%; margin-left: 10%;">
                   <div class="6u 12u$(xsmall)" >
-                    <input type="text" name="name" id="name" value="" placeholder="Name" />
+                    <input type="text" name="name" id="name" value="" placeholder="Namn" />
                   </div>
                   <div class="6u$ 12u$(xsmall)">
                     <input required type="email" name="email" id="email" value="" placeholder="Email" />
                   </div>
                   <div class="12u$">
-                    <input required type="text" minlength="2" name="subject" id="subject" value="" placeholder="Subject" />
+                    <input required type="text" minlength="2" name="subject" id="subject" value="" placeholder="Ämne" />
                   </div>
                   <div class="12u$">
-                    <textarea required name="textbody" id="textbody" placeholder="Type your message" rows="6"></textarea>
+                    <textarea required name="textbody" id="textbody" placeholder="Skriv ditt meddelande här" rows="6"></textarea>
                   </div>
                   <div class="12u$">
                     <ul class="actions" style="display: flex;justify-content: center;">
-                      <li><input type="submit" value="Send Message" class="special" /></li>
+                      <li><input type="submit" value="Skicka meddelande" class="special" /></li>
                     </ul>
                   </div>
                 </div>
