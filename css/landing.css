@@ -6,9 +6,17 @@
         grid-template-areas:
         'header header header'
         'left center right';
-        column-gap: 1rem;
-
-          
+        column-gap: 1rem; 
+}
+.gridAreaAbout{
+        min-height:100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas:
+        'header header header'
+        'left center right';
+        column-gap: 1rem; 
 }
 
 @media screen and (max-width: 1000px) {
@@ -19,6 +27,18 @@
   'center'
   'right';
   grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .gridAreaAbout{
+  grid-template-areas:
+  'header'
+  'left'
+  'center'
+  'right';
+  grid-template-rows: 0.1fr 1fr 1fr;
   grid-template-columns: 1fr;
   }
 }
