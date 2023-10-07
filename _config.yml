@@ -11,10 +11,10 @@
 # (Using that method instead of site.owner, in case your posts get cloned with your repo.)
 
 # Site settings
-title: Gartner Brothers Group
+title: HuGa Group
 description: We simplify your finance!
 owner:
-  name: Gartner Brothers Group # or company name
+  name: HuGa Group # or company name
   url: "https://spgarn.github.io" # your URL
 first_published: 2019 # if migrating another site, the year of your first publish
                       # Must be a 4-digit integer year (math is used on it)
